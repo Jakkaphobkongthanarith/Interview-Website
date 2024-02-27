@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-
-function App() {
+import Header from './Component/Header';
+import Maincomp from './Component/Maincomp';
+import Card from './Component/CardArea';
+import Footer from './Component/Footer';
+import Popup from './Component/Popup';
+import FirstPage from './PageContainer/FirstPage';
+import News from './PageContainer/News';
+import Login from './PageContainer/Login';
+import SignUp from './PageContainer/Signup';
+import { Modal, Button } from 'react-bootstrap';
+const App = () => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+        <Routes>
+          <Route path="/" element={<FirstPage />} />
+          <Route path="/news" element={<News />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+        </Routes>
+      {isPopupVisible && <Popup />}
     </div>
   );
 }
