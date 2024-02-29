@@ -5,19 +5,19 @@ const Popup = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title> Jakkaphob Kongthanarith </Modal.Title>
+        <Modal.Title> Title </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {show && (
           <>
           <img className="d-block mx-auto my-4 img-fluid" src="https://picsum.photos/400/300" />
             <p> 
-            I use everything I could find; ChatGPT, Pdf, text, Youtube Video, website such as w3school,
-             Template from Bootstrap, asking my friend. <br/>
-            This was originally a website I planned to sent to an interviewer but I edit this popup
-            part. I hope you don't mind I'm sending a website like this since I'm creating a website
-            component then import them to my page to save time, also my database and backend skill is
-               bad.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis possimus, quos corporis ex earum nemo aut provident
+            blanditiis repellat qui ab numquam nobis, libero a. Facere at
+            provident magnam, molestias laboriosam numquam commodi autem optio
+            nemo iste quis eum fuga dicta. Recusandae accusantium architecto
+            aliquid, voluptates a obcaecati voluptas blanditiis?
             </p>
           </>
         )}
