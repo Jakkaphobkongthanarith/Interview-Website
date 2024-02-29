@@ -20,8 +20,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<FirstPage />} />
           <Route path="/news" element={<News />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       {isPopupVisible && <Popup />}
     </div>
